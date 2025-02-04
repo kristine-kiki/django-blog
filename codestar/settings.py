@@ -34,8 +34,9 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['8000-kristinekiki-djangoblog-9o3vv7c1vdb.ws.codeinstitute-ide.net',
-                '.herokuapp.com']
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    '.herokuapp.com']
 
 
 # Application definition
@@ -117,7 +118,7 @@ if 'test' in sys.argv:
     DATABASES['default']['ENGINE'] = 'django.db.backends.sqlite3'
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://*.codeinstitute-ide.net/",
+    "https://*.localhost/",
     "https://*.herokuapp.com"
 ]
 
